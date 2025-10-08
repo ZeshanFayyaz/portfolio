@@ -665,11 +665,11 @@ img, iframe, embed {
    ====================================== */
 
 /* 1) Desktop defaults */
-.hamburger {            /* hide the icon on desktop */
-  display: none;
+.hamburger {
+  display: none; /* hide icon on desktop */
 }
 
-.nav-links {            /* regular horizontal menu on desktop */
+.nav-links {
   display: flex;
   position: static;
   flex-direction: row;
@@ -688,26 +688,32 @@ img, iframe, embed {
 /* 2) Mobile behavior */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;      /* show icon on mobile only */
+    display: block;
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 22px;
+    right: 22px;
     z-index: 1001;
   }
+
+  /* 🔥 Fix too much space on home page hero */
   .hero {
-    padding-top: 60px !important; /* reduce from ~110px */
+    padding-top: 60px !important;
   }
 
+  /* 🔥 Fix weird spacing on all other pages */
+  .navbar + * {
+    margin-top: 30px !important;
+  }
 
   /* Hide links until toggled */
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;           /* below navbar */
+    top: 70px;
     left: 0;
     width: 100%;
     background: #000;
@@ -716,6 +722,7 @@ img, iframe, embed {
     gap: 24px;
     z-index: 1000;
   }
+
   .nav-links.active {
     display: flex;
     animation: dropdown 0.25s ease forwards;
@@ -724,11 +731,13 @@ img, iframe, embed {
   .nav-links li a {
     font-size: 1.25rem;
     font-weight: 300;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
+/* Smooth dropdown animation */
 @keyframes dropdown {
   from { opacity: 0; transform: translateY(-12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
