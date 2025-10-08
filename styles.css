@@ -1,4 +1,6 @@
-/* Reset */
+/* =========================
+   🌐 Global Reset
+   ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,9 @@ body {
   font-family: 'Khula', sans-serif;
 }
 
-/* ✅ Navigation */
+/* =========================
+   🧭 Navigation — Desktop
+   ========================= */
 nav {
   width: 100%;
   padding: 25px 60px;
@@ -43,7 +47,9 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-/* ✅ Hero Section */
+/* =========================
+   🦸‍♂️ Hero Section
+   ========================= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -68,23 +74,18 @@ nav ul li a:hover {
   margin-bottom: 25px;
 }
 
-/* ✅ Subtitle */
 .hero .subtitle {
-  font-family: 'Khula', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.7;
   max-width: 1100px;
   opacity: 0.9;
-  text-align: left;
   margin-bottom: 60px;
 }
 
-/* ✅ Social Icons */
 .socials {
   display: flex;
   gap: 40px;
-  justify-content: flex-start;
 }
 
 .socials a img {
@@ -100,20 +101,22 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-/* ✅ Responsive */
+/* =========================
+   📱 Global Responsive
+   ========================= */
 @media (max-width: 768px) {
   .hero {
-    padding: 0 10%;
+    padding: 60px 20px 60px;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
 
   .hero .intro,
-  .hero .subtitle,
-  nav ul li a {
-    font-size: 1.1rem;
+  .hero .subtitle {
+    font-size: 1.05rem;
   }
 
   .socials a img {
@@ -122,259 +125,40 @@ nav ul li a:hover {
   }
 }
 
-/* Navbar container */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 50px;
-  background: transparent;
-  position: relative;
-}
-
-/* Left corner name/logo */
-.navbar .logo {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  position: relative;
-  top: 0;
-}
-
-/* Navbar links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.nav-links a:hover {
-  color: #d4d4d4;
+/* =========================
+   📁 Resume Page
+   ========================= */
+.resume-header {
+  text-align: center;
+  padding: 80px 40px 40px;
 }
 
 .resume-pdf {
   width: 100%;
   height: 100vh;
   border: none;
-  margin: 0;
-  padding: 0;
   display: block;
 }
 
-.resume-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.download-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.download-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background 0.2s ease;
-}
-
-.download-btn:hover {
-  background: #d4d4d4;
-}
-
-/* ---------- CONTACT PAGE ---------- */
+/* =========================
+   📬 Contact Page
+   ========================= */
 .contact-page {
   max-width: 1200px;
   margin: 80px auto;
   padding: 0 40px;
-  color: #ffffff;
   text-align: center;
 }
 
-.contact-page h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  font-weight: 800;
-}
-
-.contact-intro {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 60px auto;
-  color: #d4d4d4;
-}
-
-.contact-container {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.contact-form,
-.calendar-booking {
-  flex: 1;
-  min-width: 350px;
-  background: #111;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-  text-align: left;
-}
-
-.contact-form h2,
-.calendar-booking h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 8px;
-  background: #1e1e1e;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-}
-
-.contact-form button {
-  padding: 15px;
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #d4d4d4;
-}
-
-.calendar-booking p {
-  color: #d4d4d4;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-@media (max-width: 900px) {
-  .contact-container {
-    flex-direction: column;
-  }
-}
-
-/* ---------- RESUME PAGE ---------- */
-.resume-header {
+/* =========================
+   📖 About & Projects
+   ========================= */
+.about-header,
+.projects-header {
   text-align: center;
-  padding: 80px 40px 40px 40px; /* ⬅ now matches contact-page horizontal padding */
-  color: #ffffff;
+  padding: 100px 20px 60px;
 }
 
-.resume-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.resume-tagline {
-  font-size: 1.15rem;
-  color: #d4d4d4;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-.resume-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 100px auto;
-  text-align: center;
-}
-
-.resume-pdf {
-  width: 100%;
-  height: 100vh;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-}
-/* ---------- PAGE HEADER (About / Projects) ---------- */
-.page-header {
-  text-align: center;
-  padding: 80px 40px 40px 40px;
-  color: #ffffff;
-}
-
-.page-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.page-tagline {
-  font-size: 1.15rem;
-  color: #d4d4d4;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-/* ---------- ABOUT PAGE ---------- */
-
-/* ✅ Keep header centered */
-.about-header {
-  padding-top: 120px;
-  padding-bottom: 40px;
-  text-align: center; /* <— changed back to center */
-}
-
-.about-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.about-tagline {
-  font-size: 1.2rem;
-  color: #d4d4d4;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto; /* <— keeps it centered */
-}
-
-/* ✅ About sections stay left-aligned */
 .about-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -392,27 +176,21 @@ nav ul li a:hover {
   height: 120px;
   border-radius: 50%;
   margin-right: 50px;
-  flex-shrink: 0;
-}
-
-/* ✅ Expand text width */
-.about-text {
-  flex: 1; /* <— allows it to take all remaining space */
-  max-width: 100%; /* <— span as far right as possible */
 }
 
 .about-text h2 {
   font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 15px;
 }
 
 .about-text p {
   font-size: 1.05rem;
-  color: #cccccc;
   line-height: 1.7;
 }
 
+/* =========================
+   📱 About Responsive
+   ========================= */
 @media (max-width: 900px) {
   .about-section {
     flex-direction: column;
@@ -423,269 +201,53 @@ nav ul li a:hover {
     margin-right: 0;
   }
 }
-/* ---------- MAIN HEADER ---------- */
-.projects-header {
-  text-align: center;
-  padding: 100px 20px 60px 20px;
-  color: #fff;
-}
 
-.projects-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.projects-tagline {
-  font-size: 1.2rem;
-  color: #d4d4d4;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* ---------- SUBSECTION HEADERS ---------- */
+/* =========================
+   📑 Publications Section
+   ========================= */
 .pubs-section {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  color: #ffffff;
-  text-align: left;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #d4d4d4;
-  margin-bottom: 40px;
-  text-align: left;
-  max-width: 100%; /* allow it to use the full container width */
-  display: inline-block; /* ensures no forced wrap */
-}
-
-
-/* ---------- PUBLICATIONS ---------- */
-
-.publication-card {
-  width: 100%;
-  margin: 20px 0;
-  padding: 25px;
-  background: #111;
-  border-radius: 12px;
-}
-
-.publication:hover {
-  transform: translateY(-2px);
-}
-
-
-.publication h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.pub-authors {
-  color: #aaa;
-  font-size: 0.95rem;
-  margin-bottom: 5px;
-}
-
-.pub-meta {
-  color: #d4d4d4;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.pub-description {
-  font-size: 1rem;
-  color: #e0e0e0;
-  line-height: 1.6;
-}
-.pub-link {
-  display: inline-block;
-  margin-top: 15px;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.pub-link:hover {
-  color: #d4d4d4;
-  text-decoration: underline;
-}
-/* --- Publications layout: unify widths & padding for perfect alignment --- */
-.pubs-section {
-  max-width: 1000px;   /* pick your desired width */
-  margin: 0 auto;
-  padding: 0 40px;     /* <-- left/right padding lives here */
-}
-
-.publications-container {
-  max-width: 1000px;   /* match the section width */
-  margin: 0 auto;
-  padding: 0;          /* <-- no extra padding so it aligns with the title */
-}
-
-/* optional: keep card styling as-is */
 .publication {
   background: #0f0f0f;
   border-radius: 12px;
   padding: 1.8rem 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   line-height: 1.6;
   transition: transform 0.2s ease;
 }
-/* ===========================
-   📱 Mobile Responsiveness
-   =========================== */
 
-/* Small global helpers */
-html, body { 
-  overflow-x: hidden;        /* prevent sideways scroll on phones */
-}
-img, iframe, embed { 
-  max-width: 100%;           /* keep media from overflowing */
+.publication h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
-/* --- Tablet tweaks (<=1024px) --- */
-@media (max-width: 1024px) {
-  .hero h1 { font-size: 5rem; }
-  .hero .subtitle { font-size: 1.15rem; }
-
-  /* Give sections a little more breathing room on medium screens */
-  .pubs-section,
-  .publications-container,
-  .about-container,
-  .resume-container,
-  .contact-page { 
-    padding: 0 28px; 
-    max-width: 100%; 
-  }
-}
-
-/* --- Phone / Narrow tablet (<=768px) --- */
-@media (max-width: 768px) {
-  /* ✅ Nav: better layout on small screens */
-  nav ul,
-  .navbar ul {
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar .logo { 
-    font-size: 1.1rem; 
-    display: block;
-    text-align: center;
-    margin-bottom: 0.4rem;
-  }
-
-  /* ✅ Hero: reduce top white space */
-  .hero { 
-    padding: 60px 20px 60px;  /* ↓ reduced from ~110px */
-    text-align: center; 
-  }
-  .hero h1 { font-size: 3.4rem; }
-  .hero .intro, 
-  .hero .subtitle { font-size: 1.05rem; }
-
-  /* About: stack image + text */
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .about-photo {
-    width: 200px;
-    max-width: 65%;
-    height: auto;
-    margin: 0 0 10px 0;
-    border-radius: 8px;
-  }
-
-  /* Cards / containers */
-  .pubs-section,
-  .publications-container,
-  .resume-container,
-  .contact-page { 
-    padding: 0 20px; 
-    max-width: 100%; 
-  }
-
-  .publication {
-    padding: 18px;
-    border-radius: 10px;
-  }
-
-  .publication h3 { font-size: 1.35rem; }
-  .pub-description { font-size: 0.96rem; }
-  .pub-meta, 
-  .pub-authors { font-size: 0.9rem; }
-
-  /* Contact layout stacks */
-  .contact-container { 
-    flex-direction: column; 
-    gap: 28px; 
-  }
-  .calendar-booking { min-height: 620px; }
-  .calendly-inline-widget { height: 620px !important; }
-
-  /* Resume embed height so it doesn't feel cramped */
-  .resume-pdf { height: 82vh; }
-}
-
-/* --- Small phones (<=480px) --- */
-@media (max-width: 480px) {
-  .hero h1 { font-size: 2.6rem; }
-  .hero .intro, 
-  .hero .subtitle { font-size: 0.98rem; }
-
-  .publication h3 { font-size: 1.22rem; }
-  .pub-meta, 
-  .pub-authors { font-size: 0.85rem; }
-  .pub-description { font-size: 0.94rem; }
-
-  .resume-pdf { height: 75vh; }
-}
-/* ======================================
-   🍔 Responsive Nav — Desktop vs Mobile
-   ====================================== */
-
-/* 1) Desktop defaults */
+/* =========================
+   🍔 Hamburger Navigation
+   ========================= */
 .hamburger {
-  display: none; /* hide icon on desktop */
+  display: none;
 }
 
 .nav-links {
   display: flex;
-  position: static;
   flex-direction: row;
   gap: 50px;
   background: transparent;
-  padding: 0;
 }
 
-/* Make sure desktop nav is always visible */
+/* 🖥️ Desktop fix */
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
   }
 }
 
-/* 2) Mobile behavior */
+/* 📱 Mobile behavior */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -698,13 +260,13 @@ img, iframe, embed {
     z-index: 1001;
   }
 
-  /* 🪐 Fix hero spacing on homepage */
+  /* ✅ Hero spacing */
   .hero {
     padding-top: 30px !important;
     margin-top: 0 !important;
   }
 
-  /* 🪐 Fix spacing on other pages */
+  /* ✅ Other pages spacing */
   .about-header,
   .projects-header,
   .resume-header {
@@ -712,7 +274,7 @@ img, iframe, embed {
     margin-top: 0 !important;
   }
 
-  /* 📱 Hide links until toggled */
+  /* ✅ Hide links until toggled */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -735,32 +297,18 @@ img, iframe, embed {
   .nav-links li a {
     font-size: 1.25rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
   }
 }
 
-/* Smooth dropdown animation */
 @keyframes dropdown {
   from { opacity: 0; transform: translateY(-12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===========================
-   📱 Mobile-Only Adjustments
-   =========================== */
+/* =========================
+   📱 Logo & Navbar on Mobile
+   ========================= */
 @media (max-width: 768px) {
-
-  /* 🪄 Align logo vertically with hamburger on non-home pages */
-  .navbar .logo,
-  nav .logo {
-    display: flex;
-    align-items: center;
-    height: 70px;
-    margin-top: 0;
-    padding-top: 4px;
-    font-size: 1.3rem;
-  }
-
   .navbar {
     display: flex;
     align-items: center;
@@ -769,7 +317,15 @@ img, iframe, embed {
     height: 70px;
   }
 
-  /* 🚫 Hide the logo ONLY on the homepage hero page */
+  .navbar .logo,
+  nav .logo {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    font-size: 1.3rem;
+  }
+
+  /* 🚫 Hide logo on homepage only */
   body#index-page nav .logo {
     display: none !important;
   }
