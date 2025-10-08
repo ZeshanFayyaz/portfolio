@@ -747,26 +747,48 @@ img, iframe, embed {
 @media (max-width: 768px) {
   /* Hero section on homepage */
   .hero {
-    padding-top: 70px !important;   /* was ~110px, now closer to contact spacing */
+    padding-top: 30px !important;   /* was ~110px, now closer to contact spacing */
     margin-top: 0 !important;
   }
 
   /* About page header */
   .about-header {
-    padding-top: 70px !important;
+    padding-top: 60px !important;
     margin-top: 0 !important;
   }
 
   /* Projects/Publications page header */
   .projects-header {
-    padding-top: 70px !important;
+    padding-top: 60px !important;
     margin-top: 0 !important;
   }
 
   /* Resume header */
   .resume-header {
-    padding-top: 70px !important;
+    padding-top: 60px !important;
     margin-top: 0 !important;
   }
 }
+@media (max-width: 768px) {
+  /* Align logo vertically with hamburger */
+  .navbar .logo,
+  nav .logo {
+    display: flex;
+    align-items: center;
+    height: 70px;            /* same as navbar height */
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 1.3rem;       /* optional: slightly smaller text */
+  }
+
+  /* Optional: ensure nav container matches */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
+  }
+}
+
 
