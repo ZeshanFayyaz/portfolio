@@ -421,4 +421,16 @@ body#index-page nav ul.nav-links {
   padding-top: 140px !important;
   margin-top: 0 !important;
 }
+/* 🛠️ Fix Contact page header alignment */
+body.contact-page .contact-page,
+.contact-page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 🛠️ Align the contact page heading with other pages */
+.contact-page h1 {
+  margin-top: 0 !important;
+  padding-top: 80px; /* match About/Resume/Projects */
+}
 
