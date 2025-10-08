@@ -25,9 +25,6 @@
   <nav class="navbar">
     <a href="../" class="logo">Zeshan Fayyaz</a>
 
-    <!-- 🍔 Mobile hamburger -->
-    <div class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</div>
-
     <!-- 🌐 Nav Links -->
     <ul class="nav-links">
       <li><a href="../about/">About Me</a></li>
@@ -102,20 +99,6 @@
 
   </div>
 
-  <!-- ✅ Hamburger Toggle Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burger = document.querySelector(".hamburger");
-      const nav = document.querySelector(".nav-links");
-
-      burger.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        const expanded = nav.classList.contains("active");
-        burger.setAttribute("aria-expanded", expanded ? "true" : "false");
-        document.body.style.overflow = expanded ? "hidden" : "";
-      });
-    });
-  </script>
 
 </body>
 </html>

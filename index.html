@@ -31,7 +31,6 @@
   <nav class="navbar">
     
     <!-- 🍔 Hamburger (mobile only) -->
-    <div class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</div>
 
     <!-- 🌐 Nav Links -->
     <ul class="nav-links">
@@ -66,19 +65,6 @@
   </section>
 
   <!-- ✅ JS (at bottom so DOM is ready) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burger = document.querySelector(".hamburger");
-      const nav = document.querySelector(".nav-links");
-
-      burger.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        const expanded = nav.classList.contains("active");
-        burger.setAttribute("aria-expanded", expanded ? "true" : "false");
-        document.body.style.overflow = expanded ? "hidden" : "";
-      });
-    });
-  </script>
 
 </body>
 </html>
