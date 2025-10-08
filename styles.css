@@ -413,4 +413,12 @@ body#index-page nav ul.nav-links {
   justify-content: flex-end; /* 🔥 stays right even without logo */
   width: 100%;
 }
+/* 🔧 Standardize top spacing for all main page headers */
+.about-header,
+.projects-header,
+.resume-header,
+.contact-page h1 {
+  padding-top: 140px !important;
+  margin-top: 0 !important;
+}
 
