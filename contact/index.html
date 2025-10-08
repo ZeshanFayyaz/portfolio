@@ -19,10 +19,18 @@
   <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon">
 </head>
 
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+  }
+</script>
+
+
 <body>
   <!-- ✅ Navigation -->
   <nav class="navbar">
     <a href="../" class="logo">Zeshan Fayyaz</a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     <ul>
       <li><a href="../about/">About Me</a></li>
       <li><a href="../resume/">Resume</a></li>
