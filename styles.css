@@ -697,6 +697,10 @@ img, iframe, embed {
     right: 25px;
     z-index: 1001;
   }
+  .hero {
+    padding-top: 60px !important; /* reduce from ~110px */
+  }
+
 
   /* Hide links until toggled */
   .nav-links {

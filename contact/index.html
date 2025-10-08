@@ -13,32 +13,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&family=Inter:wght@800;900&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Favicon (now in refs folder) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../refs/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../refs/favicon/favicon-16x16.png">
-  <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon">
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../refs/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../refs/favicon/favicon-16x16.png" />
+  <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon" />
 </head>
 
-<script>
-  const burger = document.querySelector('.hamburger');
-  const links = document.querySelector('.nav-links');
-  if (burger && links) {
-    burger.addEventListener('click', () => {
-      const open = links.classList.toggle('active');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
-  }
-</script>
-
-
-
 <body>
+
   <!-- ✅ Navigation -->
   <nav class="navbar">
     <a href="../" class="logo">Zeshan Fayyaz</a>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <ul>
+
+    <!-- 🍔 Mobile Hamburger -->
+    <div class="hamburger" aria-label="Menu" aria-expanded="false">&#9776;</div>
+
+    <!-- 🌐 Nav Links -->
+    <ul class="nav-links">
       <li><a href="../about/">About Me</a></li>
       <li><a href="../resume/">Resume</a></li>
       <li><a href="../projectpub/">Publications and Projects</a></li>
@@ -84,5 +75,21 @@
       </div>
     </div>
   </div>
+
+  <!-- ✅ Hamburger Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const burger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav-links");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        const expanded = nav.classList.contains("active");
+        burger.setAttribute("aria-expanded", expanded ? "true" : "false");
+        document.body.style.overflow = expanded ? "hidden" : "";
+      });
+    });
+  </script>
 </body>
 </html>
+
