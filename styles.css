@@ -661,51 +661,58 @@ img, iframe, embed {
   .resume-pdf { height: 75vh; }
 }
 /* ===========================
-   🍔 Mobile Hamburger Menu
+   🍔 Mobile Nav Fix
    =========================== */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-}
 
-/* Hide menu on mobile by default */
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-/* --- Mobile Styles --- */
 @media (max-width: 768px) {
+  /* Hamburger positioning */
   .hamburger {
     display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
     position: absolute;
     top: 25px;
     right: 25px;
+    z-index: 1001;
+  }
+
+  /* Default: hide nav links */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;             /* sits below navbar */
+    left: 0;
+    width: 100%;
+    background: #000;
+    text-align: center;
+    padding: 20px 0;
+    gap: 25px;
     z-index: 1000;
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: #000;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 0;
-    gap: 20px;
-  }
-
+  /* When active, show it as a vertical dropdown */
   .nav-links.active {
     display: flex;
+    animation: dropdown 0.3s ease forwards;
   }
 
+  /* Links styling */
   .nav-links li a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.9);
   }
+
+  /* Hide logo when menu is open (optional but looks cleaner) */
+  .nav-links.active ~ .logo {
+    display: none;
+  }
+}
+
+/* Optional: smooth dropdown animation */
+@keyframes dropdown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
