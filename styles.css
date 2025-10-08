@@ -549,8 +549,12 @@ nav ul li a:hover {
    =========================== */
 
 /* Small global helpers */
-html, body { overflow-x: hidden; }          /* prevent sideways scroll on phones */
-img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
+html, body { 
+  overflow-x: hidden;        /* prevent sideways scroll on phones */
+}
+img, iframe, embed { 
+  max-width: 100%;           /* keep media from overflowing */
+}
 
 /* --- Tablet tweaks (<=1024px) --- */
 @media (max-width: 1024px) {
@@ -562,37 +566,53 @@ img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
   .publications-container,
   .about-container,
   .resume-container,
-  .contact-page { padding: 0 28px; max-width: 100%; }
+  .contact-page { 
+    padding: 0 28px; 
+    max-width: 100%; 
+  }
 }
 
 /* --- Phone / Narrow tablet (<=768px) --- */
 @media (max-width: 768px) {
-  /* Nav (covers both .navbar and plain nav) */
+  /* ✅ Nav: better layout on small screens */
   nav ul,
   .navbar ul {
     flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
     justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
-  .navbar .logo { font-size: 1.1rem; }
+  .navbar .logo { 
+    font-size: 1.1rem; 
+    display: block;
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
 
-  /* Hero */
-  .hero { padding: 110px 20px 60px; text-align: center; }
+  /* ✅ Hero: reduce top white space */
+  .hero { 
+    padding: 60px 20px 60px;  /* ↓ reduced from ~110px */
+    text-align: center; 
+  }
   .hero h1 { font-size: 3.4rem; }
-  .hero .intro, .hero .subtitle { font-size: 1.05rem; }
+  .hero .intro, 
+  .hero .subtitle { font-size: 1.05rem; }
 
   /* About: stack image + text */
   .about-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;   /* keeps text left-aligned */
+    align-items: flex-start;
     gap: 16px;
   }
   .about-photo {
     width: 200px;
     max-width: 65%;
     height: auto;
-    margin: 0 0 10px 0;       /* sits just above the text */
+    margin: 0 0 10px 0;
     border-radius: 8px;
   }
 
@@ -600,7 +620,10 @@ img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
   .pubs-section,
   .publications-container,
   .resume-container,
-  .contact-page { padding: 0 20px; max-width: 100%; }
+  .contact-page { 
+    padding: 0 20px; 
+    max-width: 100%; 
+  }
 
   .publication {
     padding: 18px;
@@ -609,10 +632,14 @@ img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
 
   .publication h3 { font-size: 1.35rem; }
   .pub-description { font-size: 0.96rem; }
-  .pub-meta, .pub-authors { font-size: 0.9rem; }
+  .pub-meta, 
+  .pub-authors { font-size: 0.9rem; }
 
   /* Contact layout stacks */
-  .contact-container { flex-direction: column; gap: 28px; }
+  .contact-container { 
+    flex-direction: column; 
+    gap: 28px; 
+  }
   .calendar-booking { min-height: 620px; }
   .calendly-inline-widget { height: 620px !important; }
 
@@ -623,10 +650,12 @@ img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
 /* --- Small phones (<=480px) --- */
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.6rem; }
-  .hero .intro, .hero .subtitle { font-size: 0.98rem; }
+  .hero .intro, 
+  .hero .subtitle { font-size: 0.98rem; }
 
   .publication h3 { font-size: 1.22rem; }
-  .pub-meta, .pub-authors { font-size: 0.85rem; }
+  .pub-meta, 
+  .pub-authors { font-size: 0.85rem; }
   .pub-description { font-size: 0.94rem; }
 
   .resume-pdf { height: 75vh; }
