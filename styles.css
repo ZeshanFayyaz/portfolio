@@ -79,7 +79,7 @@ nav ul li a:hover {
 /* ✅ On non-home pages: lift ONLY the links up slightly */
 body:not(#index-page) nav ul {
   position: relative;
-  top: -6px;
+  top: -3px;
 }
 
 /* ✅ Maintain hero spacing (so links don't overlap text) */
