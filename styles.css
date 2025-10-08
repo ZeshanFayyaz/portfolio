@@ -375,4 +375,11 @@ nav ul li a:hover {
   color: #d4d4d4;
   text-decoration: underline;
 }
+/* Desktop only: nudge nav links up on pages that HAVE the logo (i.e., not the homepage) */
+@media (min-width: 769px) {
+  .navbar .logo + .nav-links {
+    position: relative;
+    top: -10px;         /* adjust to -8 / -12 if you want it pixel-perfect */
+  }
+}
 
