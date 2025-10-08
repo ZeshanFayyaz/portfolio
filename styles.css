@@ -777,7 +777,7 @@ img, iframe, embed {
     align-items: center;
     height: 70px;            /* same as navbar height */
     margin-top: 0;
-    padding-top: 0;
+    padding-top: 4px;
     font-size: 1.3rem;       /* optional: slightly smaller text */
   }
 
