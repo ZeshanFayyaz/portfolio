@@ -79,7 +79,7 @@ nav ul li a:hover {
 /* ✅ On non-home pages: lift ONLY the links up slightly */
 body:not(#index-page) nav ul {
   position: relative;
-  top: 0px;
+  top: 5px;
 }
 
 /* ✅ Maintain hero spacing (so links don't overlap text) */
@@ -432,5 +432,9 @@ body.contact-page .contact-page,
 .contact-page h1 {
   margin-top: 0 !important;
   padding-top: 80px; /* match About/Resume/Projects */
+}
+/* 🪄 Push homepage nav content down by 5px */
+body#index-page nav {
+  padding-top: 30px; /* default 25px + 5px */
 }
 
