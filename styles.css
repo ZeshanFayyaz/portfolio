@@ -678,7 +678,7 @@ img, iframe, embed {
   padding: 0;
 }
 
-/* If a mobile toggle left .active behind, ignore it on desktop */
+/* Make sure desktop nav is always visible */
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
@@ -698,17 +698,21 @@ img, iframe, embed {
     z-index: 1001;
   }
 
-  /* 🔥 Fix too much space on home page hero */
+  /* 🪐 Fix hero spacing on homepage */
   .hero {
+    padding-top: 30px !important;
+    margin-top: 0 !important;
+  }
+
+  /* 🪐 Fix spacing on other pages */
+  .about-header,
+  .projects-header,
+  .resume-header {
     padding-top: 60px !important;
+    margin-top: 0 !important;
   }
 
-  /* 🔥 Fix weird spacing on all other pages */
-  .navbar + * {
-    margin-top: 30px !important;
-  }
-
-  /* Hide links until toggled */
+  /* 📱 Hide links until toggled */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -740,48 +744,23 @@ img, iframe, embed {
   from { opacity: 0; transform: translateY(-12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
 /* ===========================
-   📱 Mobile Header Spacing Fix
+   📱 Mobile-Only Adjustments
    =========================== */
-
 @media (max-width: 768px) {
-  /* Hero section on homepage */
-  .hero {
-    padding-top: 30px !important;   /* was ~110px, now closer to contact spacing */
-    margin-top: 0 !important;
-  }
 
-  /* About page header */
-  .about-header {
-    padding-top: 60px !important;
-    margin-top: 0 !important;
-  }
-
-  /* Projects/Publications page header */
-  .projects-header {
-    padding-top: 60px !important;
-    margin-top: 0 !important;
-  }
-
-  /* Resume header */
-  .resume-header {
-    padding-top: 60px !important;
-    margin-top: 0 !important;
-  }
-}
-@media (max-width: 768px) {
-  /* Align logo vertically with hamburger */
+  /* 🪄 Align logo vertically with hamburger on non-home pages */
   .navbar .logo,
   nav .logo {
     display: flex;
     align-items: center;
-    height: 70px;            /* same as navbar height */
+    height: 70px;
     margin-top: 0;
     padding-top: 4px;
-    font-size: 1.3rem;       /* optional: slightly smaller text */
+    font-size: 1.3rem;
   }
 
-  /* Optional: ensure nav container matches */
   .navbar {
     display: flex;
     align-items: center;
@@ -789,13 +768,9 @@ img, iframe, embed {
     padding: 0 20px;
     height: 70px;
   }
-}
-/* Hide the logo text only on mobile */
-@media (max-width: 768px) {
-  nav .logo {
+
+  /* 🚫 Hide the logo ONLY on the homepage hero page */
+  body#index-page nav .logo {
     display: none !important;
   }
 }
-
-
-
