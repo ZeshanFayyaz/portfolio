@@ -544,3 +544,90 @@ nav ul li a:hover {
   line-height: 1.6;
   transition: transform 0.2s ease;
 }
+/* ===========================
+   📱 Mobile Responsiveness
+   =========================== */
+
+/* Small global helpers */
+html, body { overflow-x: hidden; }          /* prevent sideways scroll on phones */
+img, iframe, embed { max-width: 100%; }     /* keep media from overflowing */
+
+/* --- Tablet tweaks (<=1024px) --- */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 5rem; }
+  .hero .subtitle { font-size: 1.15rem; }
+
+  /* Give sections a little more breathing room on medium screens */
+  .pubs-section,
+  .publications-container,
+  .about-container,
+  .resume-container,
+  .contact-page { padding: 0 28px; max-width: 100%; }
+}
+
+/* --- Phone / Narrow tablet (<=768px) --- */
+@media (max-width: 768px) {
+  /* Nav (covers both .navbar and plain nav) */
+  nav ul,
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .navbar .logo { font-size: 1.1rem; }
+
+  /* Hero */
+  .hero { padding: 110px 20px 60px; text-align: center; }
+  .hero h1 { font-size: 3.4rem; }
+  .hero .intro, .hero .subtitle { font-size: 1.05rem; }
+
+  /* About: stack image + text */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* keeps text left-aligned */
+    gap: 16px;
+  }
+  .about-photo {
+    width: 200px;
+    max-width: 65%;
+    height: auto;
+    margin: 0 0 10px 0;       /* sits just above the text */
+    border-radius: 8px;
+  }
+
+  /* Cards / containers */
+  .pubs-section,
+  .publications-container,
+  .resume-container,
+  .contact-page { padding: 0 20px; max-width: 100%; }
+
+  .publication {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .publication h3 { font-size: 1.35rem; }
+  .pub-description { font-size: 0.96rem; }
+  .pub-meta, .pub-authors { font-size: 0.9rem; }
+
+  /* Contact layout stacks */
+  .contact-container { flex-direction: column; gap: 28px; }
+  .calendar-booking { min-height: 620px; }
+  .calendly-inline-widget { height: 620px !important; }
+
+  /* Resume embed height so it doesn't feel cramped */
+  .resume-pdf { height: 82vh; }
+}
+
+/* --- Small phones (<=480px) --- */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.6rem; }
+  .hero .intro, .hero .subtitle { font-size: 0.98rem; }
+
+  .publication h3 { font-size: 1.22rem; }
+  .pub-meta, .pub-authors { font-size: 0.85rem; }
+  .pub-description { font-size: 0.94rem; }
+
+  .resume-pdf { height: 75vh; }
+}
