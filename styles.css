@@ -397,4 +397,20 @@ body:not(#index-page) nav ul {
   color: #d4d4d4;
   text-decoration: underline;
 }
+/* ✅ Home page nav alignment fix */
+body#index-page nav {
+  display: flex;
+  justify-content: flex-end; /* push links to the right */
+  align-items: center;
+  padding: 25px 60px;
+}
+
+body#index-page nav ul.nav-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 50px;
+  justify-content: flex-end; /* 🔥 stays right even without logo */
+  width: 100%;
+}
 
