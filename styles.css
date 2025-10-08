@@ -25,9 +25,6 @@ nav {
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* Hide the logo on homepage only */
@@ -45,10 +42,9 @@ nav .logo {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  list-style: none;
   gap: 50px;
 }
 
@@ -374,33 +370,4 @@ nav ul li a:hover {
   color: #d4d4d4;
   text-decoration: underline;
 }
-nav {
-  width: 100%;
-  padding: 25px 60px;
-  background: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
 
-nav ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  gap: 50px;
-}
-
-nav ul li a {
-  font-family: 'Khula', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  opacity: 0.9;
-  transition: opacity 0.2s;
-}
-
-nav ul li a:hover {
-  opacity: 1;
-}
