@@ -20,10 +20,17 @@
 </head>
 
 <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
+  const burger = document.querySelector('.hamburger');
+  const links = document.querySelector('.nav-links');
+  if (burger && links) {
+    burger.addEventListener('click', () => {
+      const open = links.classList.toggle('active');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
   }
 </script>
+
 
 
 <body>
