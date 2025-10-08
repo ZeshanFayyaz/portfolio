@@ -740,4 +740,33 @@ img, iframe, embed {
   from { opacity: 0; transform: translateY(-12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* ===========================
+   📱 Mobile Header Spacing Fix
+   =========================== */
+
+@media (max-width: 768px) {
+  /* Hero section on homepage */
+  .hero {
+    padding-top: 70px !important;   /* was ~110px, now closer to contact spacing */
+    margin-top: 0 !important;
+  }
+
+  /* About page header */
+  .about-header {
+    padding-top: 70px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Projects/Publications page header */
+  .projects-header {
+    padding-top: 70px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Resume header */
+  .resume-header {
+    padding-top: 70px !important;
+    margin-top: 0 !important;
+  }
+}
 
