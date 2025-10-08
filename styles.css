@@ -790,5 +790,12 @@ img, iframe, embed {
     height: 70px;
   }
 }
+/* Hide the logo text only on mobile */
+@media (max-width: 768px) {
+  nav .logo {
+    display: none !important;
+  }
+}
+
 
 
