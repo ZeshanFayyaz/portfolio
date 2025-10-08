@@ -15,7 +15,7 @@ body {
 }
 
 /* ======================================
-   ✅ Navigation (Desktop Only)
+   ✅ Navigation (Desktop Only, Final)
    ====================================== */
 nav {
   width: 100%;
@@ -25,18 +25,17 @@ nav {
   top: 0;
   left: 0;
   z-index: 10;
-}
-/* ✅ Only adjust navbar padding for non-home pages */
-body:not(#index-page) nav {
-  padding: 35px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-/* Hide the logo on homepage only */
+/* ✅ Hide the logo only on homepage */
 body#index-page nav .logo {
   display: none;
 }
 
+/* ✅ Logo styling */
 nav .logo {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
@@ -46,11 +45,15 @@ nav .logo {
   letter-spacing: 0.5px;
 }
 
+/* ✅ Nav Links (right side) */
 nav ul {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   list-style: none;
   gap: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -66,6 +69,25 @@ nav ul li a {
 nav ul li a:hover {
   opacity: 1;
 }
+
+/* ✅ On all pages *except home*: push ONLY the links up by 10px */
+body:not(#index-page) nav ul {
+  position: relative;
+  top: -10px;
+}
+
+/* ✅ Maintain consistent header spacing across pages */
+body#index-page .hero {
+  margin-top: 100px; /* space below fixed nav */
+}
+
+body:not(#index-page) .page-header,
+body:not(#index-page) .resume-header,
+body:not(#index-page) .projects-header,
+body:not(#index-page) .about-header {
+  padding-top: 120px; /* account for fixed nav + small offset */
+}
+
 
 /* ======================================
    ✅ Hero Section (Homepage)
@@ -375,10 +397,4 @@ nav ul li a:hover {
   color: #d4d4d4;
   text-decoration: underline;
 }
-/* 🛠️ Fix top-right nav alignment ONLY on non-index pages */
-body:not(#index-page) .nav-links {
-  position: relative;
-  top: -15px; /* move links up */
-}
-
 
