@@ -423,3 +423,124 @@ nav ul li a:hover {
     margin-right: 0;
   }
 }
+/* ---------- MAIN HEADER ---------- */
+.projects-header {
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+  color: #fff;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.projects-tagline {
+  font-size: 1.2rem;
+  color: #d4d4d4;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---------- SUBSECTION HEADERS ---------- */
+.pubs-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #d4d4d4;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 100%; /* allow it to use the full container width */
+  display: inline-block; /* ensures no forced wrap */
+}
+
+
+/* ---------- PUBLICATIONS ---------- */
+
+.publication-card {
+  width: 100%;
+  margin: 20px 0;
+  padding: 25px;
+  background: #111;
+  border-radius: 12px;
+}
+
+.publication:hover {
+  transform: translateY(-2px);
+}
+
+
+.publication h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.pub-authors {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.pub-meta {
+  color: #d4d4d4;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.pub-description {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+.pub-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-link:hover {
+  color: #d4d4d4;
+  text-decoration: underline;
+}
+/* --- Publications layout: unify widths & padding for perfect alignment --- */
+.pubs-section {
+  max-width: 1000px;   /* pick your desired width */
+  margin: 0 auto;
+  padding: 0 40px;     /* <-- left/right padding lives here */
+}
+
+.publications-container {
+  max-width: 1000px;   /* match the section width */
+  margin: 0 auto;
+  padding: 0;          /* <-- no extra padding so it aligns with the title */
+}
+
+/* optional: keep card styling as-is */
+.publication {
+  background: #0f0f0f;
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  line-height: 1.6;
+  transition: transform 0.2s ease;
+}

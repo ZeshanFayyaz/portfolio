@@ -4,31 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Zeshan Fayyaz</title>
-  <link rel="stylesheet" href="styles.css" />
 
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- ✅ Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&family=Inter:wght@800;900&display=swap" rel="stylesheet" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+  <!-- ✅ Favicon (now in refs folder) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../refs/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../refs/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- ✅ Navigation -->
   <nav class="navbar">
-    <a href="index.html" class="logo">Zeshan Fayyaz</a>
+    <a href="../" class="logo">Zeshan Fayyaz</a>
     <ul>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projectpub.html">Publications and Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="../about/">About Me</a></li>
+      <li><a href="../resume/">Resume</a></li>
+      <li><a href="../projectpub/">Publications and Projects</a></li>
+      <li><a href="../contact/">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Contact Section -->
+  <!-- 📬 Contact Section -->
   <div class="contact-page">
     <h1>Get in Touch</h1>
     <p class="contact-intro">
@@ -36,7 +39,7 @@
     </p>
 
     <div class="contact-container">
-      <!-- EMAIL FORM -->
+      <!-- ✉️ Email Form -->
       <div class="contact-form">
         <h2>Send Me a Message</h2>
         <form action="https://formspree.io/f/xkgqvzno" method="POST">
@@ -47,19 +50,22 @@
         </form>
       </div>
 
-      <!-- CALENDLY WIDGET -->
+      <!-- 📅 Calendly Widget -->
       <div class="calendar-booking">
         <h2>Book a Coffee Chat</h2>
         <p>Pick a time that works best for you and let’s connect.</p>
 
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" 
-             data-url="https://calendly.com/zeshan-fayyaz98/30min" 
-             style="min-width:320px;height:700px;">
+        <!-- Calendly inline widget -->
+        <div 
+          class="calendly-inline-widget" 
+          data-url="https://calendly.com/zeshan-fayyaz98/30min" 
+          style="min-width:320px;height:700px;">
         </div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
-
+        <script 
+          type="text/javascript" 
+          src="https://assets.calendly.com/assets/external/widget.js" 
+          async>
+        </script>
       </div>
     </div>
   </div>
