@@ -340,5 +340,21 @@ body#index-page .hero {
     font-weight: 700;
   }
 }
+/* Pull content up on the resume page */
+.resume-header {
+  padding: 90px 20px 12px 20px !important; /* lower from 140px */
+}
+.resume-container {
+  max-width: 900px;
+  margin: 12px auto 60px auto;            /* reduce big top gap */
+  padding: 0 20px;
+}
+
+/* Make the iframe visible above the fold */
+.resume-pdf {
+  width: 100%;
+  height: calc(100vh - 180px);            /* header + nav allowance */
+  border: none;
+}
 
 }
