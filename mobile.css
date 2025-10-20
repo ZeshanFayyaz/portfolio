@@ -249,5 +249,12 @@ body#index-page .hero{
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+/* === FORCE HOMEPAGE LINKS TO BE RIGHT-ALIGNED === */
+body#index-page nav.navbar ul.nav-links {
+  align-items: flex-end !important;
+  text-align: right !important;
+  margin-right: 20px !important;
+}
+
 
 }
