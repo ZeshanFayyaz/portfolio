@@ -437,4 +437,7 @@ body.contact-page .contact-page,
 body#index-page nav {
   padding-top: 30px; /* default 25px + 5px */
 }
-
+/* Hide hamburger by default (desktop) */
+.nav-toggle {
+  display: none;
+}

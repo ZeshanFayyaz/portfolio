@@ -7,6 +7,7 @@
 
   <!-- ✅ Fonts & Styles -->
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../mobile.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&family=Inter:wght@800;900&display=swap" rel="stylesheet" />
@@ -17,14 +18,27 @@
   <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon" />
 </head>
 
+<script>
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+    });
+  })();
+</script>
+
+
 <body>
 
   <!-- ✅ Navigation (clean URLs) -->
   <nav class="navbar">
     <a href="../" class="logo">Zeshan Fayyaz</a>
-
-    <!-- 🌐 Nav Links -->
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <ul id="primary-nav" class="nav-links">
       <li><a href="../about/">About Me</a></li>
       <li><a href="../resume/">Resume</a></li>
       <li><a href="../projectpub/">Publications and Projects</a></li>

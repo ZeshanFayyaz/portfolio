@@ -1,0 +1,232 @@
+/* =====================================================
+   ✅ Mobile Overrides (≤ 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+
+  /* ----- General Base Adjustments ----- */
+  html { scroll-behavior: smooth; }
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ----- Navbar & Hamburger ----- */
+  nav.navbar {
+    padding: 14px 16px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10;
+    background: #000;
+  }
+
+  /* Slight top offset for homepage nav (your +5px tweak) */
+  body#index-page nav.navbar {
+    padding-top: 18px;
+  }
+
+  /* Hide nav links by default (mobile collapsed) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0 6px;
+    background: #000;
+    width: 100%;
+  }
+
+  /* When toggled open */
+  .nav-links.is-open {
+    display: flex !important;
+  }
+
+  /* Hamburger button (mobile only) */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  /* Hide hamburger on desktop — this is redundant if you also have display:none in styles.css */
+  @media (min-width: 769px) {
+    .nav-toggle { display: none !important; }
+  }
+
+  /* Keep logo readable */
+  nav .logo {
+    font-size: 1rem;
+  }
+
+  /* ----- Section Header Padding Fix (avoid nav overlap) ----- */
+  .hero,
+  .about-header,
+  .projects-header,
+  .resume-header,
+  .contact-page h1 {
+    padding-top: 86px !important;
+    margin-top: 0 !important;
+  }
+
+  /* ----- Homepage Hero ----- */
+  .hero {
+    min-height: calc(100vh - 86px);
+    padding: 0 20px;
+    margin-top: 0 !important;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero .intro {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90ch;
+    margin-bottom: 18px;
+  }
+
+  .socials {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .socials a img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ----- About Page ----- */
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .about-photo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px auto;
+  }
+
+  .about-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  /* ----- Projects / Publications Page ----- */
+  .pubs-section {
+    padding: 0 20px;
+  }
+
+  .publication {
+    padding: 1.2rem 1rem;
+  }
+
+  .publication h3 {
+    font-size: 1.2rem;
+  }
+
+  .pub-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* ----- Resume Page ----- */
+  .resume-header {
+    padding: 86px 20px 16px 20px !important;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+
+  .resume-tagline {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .resume-container {
+    margin: 0 auto 40px auto;
+    padding: 0 12px;
+  }
+
+  .resume-pdf {
+    height: 80vh;
+  }
+
+  /* ----- Contact Page ----- */
+  .contact-page {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .contact-form,
+  .calendar-booking {
+    min-width: 0;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .calendar-booking .calendly-inline-widget {
+    height: 600px !important;
+  }
+
+  /* ----- Responsive Media ----- */
+  img, video, iframe, embed {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

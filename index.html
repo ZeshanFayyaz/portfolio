@@ -18,6 +18,7 @@
 
   <!-- ✅ Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css" />
 
   <!-- ✅ Favicon (moved into refs/) -->
   <link rel="icon" type="image/png" sizes="32x32" href="refs/favicon/favicon-32x32.png">
@@ -25,19 +26,33 @@
   <link rel="shortcut icon" href="refs/favicon/favicon.ico" type="image/x-icon">
 </head>
 
+<script>
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('is-open', !open);
+    });
+  })();
+</script>
+
+
 <body id = "index-page">
 
   <!-- ✅ Navigation -->
   <nav class="navbar">
-    
-    <!-- 🌐 Nav Links -->
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <ul id="primary-nav" class="nav-links">
       <li><a href="about/">About Me</a></li>
       <li><a href="resume/">Resume</a></li>
       <li><a href="projectpub/">Publications and Projects</a></li>
       <li><a href="contact/">Contact</a></li>
     </ul>
   </nav>
+
 
   <!-- ✅ Hero Section -->
   <section class="hero" id="home">
