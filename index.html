@@ -67,9 +67,16 @@
     }
 
     body#index-page .hero .socials {
-      margin-top: 10px !important;  /* was around 30px */
+      margin-top: 15px !important;  /* was around 30px */
       gap: 20px !important;         /* optional – smaller space between icons */
     }
+  
+    /* tighten top spacing for hero text (mobile only) */
+    body#index-page .hero {
+      margin-top: -20px !important;  /* try -10px to -20px range for fine-tuning */
+      padding-top: 0 !important;
+    }
+
 
   }
   </style>
@@ -95,7 +102,7 @@
   <!-- ✅ Hero Section -->
   <section class="hero" id="home">
     <p class="intro">Hey there, welcome to the portfolio of</p>
-    <h1>Zeshan Fayyaz10</h1>
+    <h1>Zeshan Fayyaz11</h1>
     <p class="subtitle">
       I’m a software engineer specializing in AI, machine learning, and backend development,
       with a Master’s in Computer Science from the University of Waterloo.
