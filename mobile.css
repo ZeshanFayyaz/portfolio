@@ -370,5 +370,25 @@ body#index-page .hero {
     border: none;
   }
 }
+@media (max-width: 768px) {
+  /* Show the button */
+  .resume-open-mobile { 
+    display: block !important; 
+    text-align: center; 
+    margin: 12px 20px 24px; 
+  }
+  .resume-open-mobile a {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* If you want button only on mobile, hide the iframe */
+  .resume-pdf { display: none !important; }
+}
 
 }
