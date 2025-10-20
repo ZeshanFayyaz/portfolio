@@ -312,5 +312,19 @@ body { padding-top: 100px !important; }  /* try 80px if you want it tighter */
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+/* === Fix hero text clipping under navbar on homepage === */
+body#index-page nav.navbar {
+  background: #000 !important;
+  z-index: 1000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Give the hero just a little breathing room to clear nav */
+body#index-page .hero {
+  padding-top: 100px !important;  /* just enough to clear stacked nav, not too much */
+}
 
 }
