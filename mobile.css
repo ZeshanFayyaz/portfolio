@@ -286,5 +286,31 @@ body#index-page nav.navbar .nav-links a {
   display: block;
   text-align: right !important;
 }
+/* Tighten global offset under fixed nav */
+body { padding-top: 100px !important; }  /* try 80px if you want it tighter */
+
+/* Reduce per-page header padding that was set with !important in styles.css */
+.about-header,
+.projects-header,
+.resume-header,
+.contact-page h1 {
+  padding-top: 80px !important;  /* was 140px */
+}
+
+/* Resume page also has extra padding in its own rule — clamp it too */
+.resume-header {
+  padding: 80px 20px 24px 20px !important;  /* top | sides | bottom */
+}
+
+/* Projects header has big top padding from styles — trim it */
+.projects-header {
+  padding: 100px 20px 40px 20px !important;
+}
+
+/* Contact wrapper sometimes adds space—keep it compact */
+.contact-page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 
 }
