@@ -229,4 +229,17 @@
     height: auto;
     display: block;
   }
+  /* Homepage (hero) — mobile only */
+  body#index-page .navbar { justify-content: flex-end; }
+  body#index-page .nav-toggle { margin-left: auto; }
+
+    /* Hide the menu list by default on the homepage */
+  body#index-page .nav-links { display: none; }
+
+    /* Show it only when the hamburger is toggled open */
+  body#index-page .nav-links.is-open { display: flex !important; flex-direction: column; gap: 10px; }
+
+    /* Keep the header above hero and tappable */
+  nav.navbar { position: fixed; top:0; left:0; right:0; z-index: 1000; }
+
 }
