@@ -1,14 +1,9 @@
 /* =======================================================
    📱 Mobile-only stylesheet
-   This file affects only screens ≤ 768px wide.
-   Desktop layout (styles.css) remains unchanged.
+   Unified layout for all pages (≤768px wide)
    ======================================================= */
-
 @media (max-width: 768px) {
 
-  /* ------------------------------
-     ✅ GENERAL FIXES
-     ------------------------------ */
   html, body {
     overflow-x: hidden;
     margin: 0;
@@ -24,14 +19,14 @@
     display: block;
   }
 
-  /* add breathing room below fixed nav */
+  /* Add room below the fixed navbar */
   body {
-    padding-top: 160px; /* adjust if nav height changes */
+    padding-top: 160px; /* adjust if needed */
   }
 
-  /* ------------------------------
+  /* =======================================================
      ✅ NAVIGATION
-     ------------------------------ */
+     ======================================================= */
   nav.navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -39,16 +34,16 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 24px 20px;  /* slightly more padding to lower logo */
     z-index: 1000;
   }
 
-  /* hide any leftover hamburger buttons */
+  /* Hide hamburger if any remnants exist */
   .nav-toggle {
     display: none !important;
   }
 
-  /* logo on inner pages */
+  /* Left-side logo on all pages */
   nav .logo {
     display: block;
     color: #fff;
@@ -56,23 +51,24 @@
     font-weight: 800;
     font-size: 1rem;
     white-space: nowrap;
-    margin-right: auto;
+    margin-top: 2px;       /* tiny offset for alignment */
     text-decoration: none;
   }
 
-  /* hide logo on homepage */
+  /* Hide the logo ONLY on the homepage */
   body#index-page nav .logo {
     display: none;
   }
 
-  /* right-side stacked links */
+  /* Right-side stacked links (identical across all pages) */
   .nav-links {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
-    margin: 0 0 0 auto;
+    justify-content: flex-start;
+    gap: 8px; /* tighter spacing now matches inner pages */
+    margin: 0;
     padding: 0;
   }
 
@@ -89,9 +85,9 @@
     text-decoration: underline;
   }
 
-  /* ------------------------------
-     ✅ HERO SECTION (HOME PAGE)
-     ------------------------------ */
+  /* =======================================================
+     ✅ HERO SECTION (Homepage)
+     ======================================================= */
   body#index-page .hero {
     padding: 0 20px;
     text-align: left;
@@ -124,9 +120,9 @@
     opacity: 0.85;
   }
 
-  /* ------------------------------
+  /* =======================================================
      ✅ ABOUT PAGE
-     ------------------------------ */
+     ======================================================= */
   .about-header h1 {
     font-size: 2rem;
   }
@@ -156,9 +152,9 @@
     line-height: 1.6;
   }
 
-  /* ------------------------------
+  /* =======================================================
      ✅ PROJECTS / PUBLICATIONS
-     ------------------------------ */
+     ======================================================= */
   .projects-header h1 {
     font-size: 2rem;
   }
@@ -179,9 +175,9 @@
     font-size: 0.95rem;
   }
 
-  /* ------------------------------
+  /* =======================================================
      ✅ RESUME PAGE
-     ------------------------------ */
+     ======================================================= */
   .resume-header h1 {
     font-size: 2rem;
   }
@@ -190,9 +186,9 @@
     height: 80vh;
   }
 
-  /* ------------------------------
+  /* =======================================================
      ✅ CONTACT PAGE
-     ------------------------------ */
+     ======================================================= */
   .contact-page {
     padding: 0 20px;
   }
