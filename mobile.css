@@ -326,5 +326,19 @@ body#index-page nav.navbar {
 body#index-page .hero {
   padding-top: 100px !important;  /* just enough to clear stacked nav, not too much */
 }
+/* Hide inline PDF on phones; show the open-in-new-tab button */
+@media (max-width: 768px) {
+  .resume-pdf { display: none; }
+  .resume-open-mobile { display: block; text-align: center; margin: 16px 0 40px; }
+  .resume-open-mobile a {
+    display: inline-block;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
 
 }
