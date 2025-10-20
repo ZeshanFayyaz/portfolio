@@ -214,4 +214,40 @@
   .calendar-booking .calendly-inline-widget {
     height: 600px !important;
   }
+
+  /* === FORCE HOMEPAGE NAV TO MATCH INNER PAGES (mobile only) === */
+body#index-page nav.navbar{
+  padding: 24px 20px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+}
+
+/* kill the big desktop gap + force vertical stack, right-aligned */
+body#index-page nav.navbar ul.nav-links{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;            /* match inner pages */
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+/* cancel any “nudge up” desktop rule */
+body#index-page nav ul{
+  position: static !important;
+  top: 0 !important;
+}
+
+/* hide logo on home (belt & suspenders) */
+body#index-page nav .logo{ display: none !important; }
+
+/* remove legacy hero offsets on home */
+body#index-page .hero{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 }
