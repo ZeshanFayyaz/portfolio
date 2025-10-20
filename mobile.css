@@ -410,5 +410,20 @@ body#index-page .hero {
   /* hide embedded viewer on phones */
   .resume-pdf { display: none !important; }
 }
+@media (max-width: 768px) {
+  iframe[src*="calendly.com"] {
+    width: 100% !important;
+    min-height: 700px !important;
+    border: none !important;
+  }
+
+  .calendly-inline-widget,
+  .calendly-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+  }
+}
 
 }
