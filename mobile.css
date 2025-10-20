@@ -242,4 +242,57 @@
     /* Keep the header above hero and tappable */
   nav.navbar { position: fixed; top:0; left:0; right:0; z-index: 1000; }
 
+/* === NAV: lock layout + overlay menu === */
+nav.navbar{
+  position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; background:#000;
+}
+
+/* keep logo on one line and stop it from shrinking/wrapping */
+nav .logo{ font-size: 1rem; white-space: nowrap; flex: 0 0 auto; }
+
+/* hamburger always anchors to the right */
+.nav-toggle{
+  margin-left: auto;            /* pushes it to the right */
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border: 1px solid #444; border-radius: 8px;
+  background: transparent; color:#fff; font-size: 22px; line-height:1;
+  position: relative; z-index: 2100; /* stays clickable above everything */
+}
+
+/* hide the list by default on mobile */
+.nav-links{ display:none; }
+
+/* when open, render as an OVERLAY (so nothing shifts) */
+.nav-links.is-open{
+  display: flex !important;
+  position: fixed; left: 0; right: 0; top: 60px;   /* ~nav height */
+  background:#000; border-top: 1px solid #222;
+  flex-direction: column; gap: 14px;
+  padding: 14px 20px;
+  z-index: 2050;
+}
+
+/* create room for the fixed navbar so page text isn't covered */
+body{ padding-top: 64px; }
+
+/* === HOMEPAGE (hero) rules: show only the hamburger initially === */
+body#index-page .logo{ display: none; }          /* you already do this; keep it */
+body#index-page .navbar{ justify-content: flex-end; }
+body#index-page .nav-links{ display: none; }     /* hide list */
+body#index-page .nav-links.is-open{
+  display: flex !important;                      /* show list when toggled */
+  position: fixed; left: 0; right: 0; top: 60px;
+  background:#000; border-top:1px solid #222;
+  flex-direction: column; gap: 14px; padding: 14px 20px;
+}
+/* hero spacing so title isn’t jammed under the fixed nav */
+body#index-page .hero{ padding-top: 96px !important; }
+
+/* extra safety: no horizontal scroll, media scales */
+html, body{ overflow-x: hidden; }
+img, video, iframe, embed{ max-width:100%; height:auto; display:block; }
+
+
 }
