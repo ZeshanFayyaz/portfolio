@@ -51,13 +51,13 @@
     font-weight: 800;
     font-size: 1rem;
     white-space: nowrap;
-    margin-top: 2px;       /* tiny offset for alignment */
+    margin-top: 2px;
     text-decoration: none;
   }
 
   /* Hide the logo ONLY on the homepage */
   body#index-page nav .logo {
-    display: none;
+    display: none !important;
   }
 
   /* Right-side stacked links (identical across all pages) */
@@ -67,7 +67,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    gap: 8px; /* tighter spacing now matches inner pages */
+    gap: 8px;
     margin: 0;
     padding: 0;
   }
@@ -215,46 +215,39 @@
     height: 600px !important;
   }
 
-  /* === FORCE HOMEPAGE NAV TO MATCH INNER PAGES (mobile only) === */
-body#index-page nav.navbar{
-  padding: 24px 20px !important;
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: space-between !important;
-}
+  /* =======================================================
+     ✅ HOMEPAGE NAVIGATION OVERRIDES
+     ======================================================= */
+  body#index-page nav.navbar {
+    padding: 24px 20px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    text-align: right !important;
+  }
 
-/* kill the big desktop gap + force vertical stack, right-aligned */
-body#index-page nav.navbar ul.nav-links{
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-end !important;
-  justify-content: flex-start !important;
-  gap: 8px !important;            /* match inner pages */
-  margin: 0 !important;
-  padding: 0 !important;
-  width: auto !important;
-}
+  body#index-page nav.navbar ul.nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+    width: auto !important;
+    margin: 0 20px 0 auto !important;
+    padding: 0 !important;
+    gap: 8px !important;
+  }
 
-/* cancel any “nudge up” desktop rule */
-body#index-page nav ul{
-  position: static !important;
-  top: 0 !important;
-}
+  body#index-page nav.navbar ul.nav-links li,
+  body#index-page nav.navbar ul.nav-links a {
+    width: auto !important;
+    text-align: right !important;
+    display: block;
+  }
 
-/* hide logo on home (belt & suspenders) */
-body#index-page nav .logo{ display: none !important; }
-
-/* remove legacy hero offsets on home */
-body#index-page .hero{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-/* === FORCE HOMEPAGE LINKS TO BE RIGHT-ALIGNED === */
-body#index-page nav.navbar ul.nav-links {
-  align-items: flex-end !important;
-  text-align: right !important;
-  margin-right: 20px !important;
-}
-
-
+  /* remove hero offset for home */
+  body#index-page .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 }
