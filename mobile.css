@@ -250,4 +250,41 @@
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
+  /* ===== HOMEPAGE: hard-pin the nav links to top-right ===== */
+body#index-page nav.navbar {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  padding: 24px 20px !important;
+}
+
+/* hide the logo on home */
+body#index-page nav.navbar .logo { display: none !important; }
+
+/* place the list at the top-right and stack it */
+body#index-page nav.navbar .nav-links {
+  position: absolute !important;
+  top: 24px !important;
+  right: 20px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+
+  text-align: right !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 8px !important;
+}
+
+/* make sure items don’t stretch */
+body#index-page nav.navbar .nav-links li,
+body#index-page nav.navbar .nav-links a {
+  width: auto !important;
+  display: block;
+  text-align: right !important;
+}
+
 }
