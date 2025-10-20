@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +14,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600&family=Inter:wght@800;900&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Stylesheet -->
+  <!-- ✅ Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=5">
   <link rel="stylesheet" href="mobile.css?v=5">
 
+  <!-- ✅ Homepage mobile-only override -->
+  <style>
+  @media (max-width: 768px){
+    body#index-page nav.navbar {
+      position: fixed !important;
+      top: 0; left: 0; right: 0;
+      padding: 24px 20px !important;
+      display: block !important;
+      background: #000 !important;
+      text-align: right !important;
+      z-index: 1000 !important;
+    }
 
+    /* hide logo just in case */
+    body#index-page nav.navbar .logo { display: none !important; }
 
-  <!-- ✅ Favicon (moved into refs/) -->
+    /* place the list top-right, stacked, right-aligned */
+    body#index-page nav.navbar .nav-links {
+      position: absolute !important;
+      top: 24px !important;
+      right: 20px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-end !important;
+      justify-content: flex-start !important;
+      gap: 8px !important;
+      width: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+      text-align: right !important;
+    }
+
+    body#index-page nav.navbar .nav-links li,
+    body#index-page nav.navbar .nav-links a {
+      width: auto !important;
+      display: block !important;
+      text-align: right !important;
+    }
+
+    /* push hero below fixed nav */
+    body#index-page { padding-top: 160px !important; }
+  }
+  </style>
+
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="refs/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="refs/favicon/favicon-16x16.png">
   <link rel="shortcut icon" href="refs/favicon/favicon.ico" type="image/x-icon">
 </head>
 
-
-
-<body id = "index-page">
+<body id="index-page">
 
   <!-- ✅ Navigation -->
   <nav class="navbar">
@@ -42,13 +81,10 @@
     </ul>
   </nav>
 
-
-
-
   <!-- ✅ Hero Section -->
   <section class="hero" id="home">
     <p class="intro">Hey there, welcome to the portfolio of</p>
-    <h1>Zeshan Fayyaz2</h1>
+    <h1>Zeshan Fayyaz</h1>
     <p class="subtitle">
       I’m a software engineer specializing in AI, machine learning, and backend development,
       with a Master’s in Computer Science from the University of Waterloo.
@@ -67,8 +103,6 @@
       </a>
     </div>
   </section>
-
-
 
 </body>
 </html>
