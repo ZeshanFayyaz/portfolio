@@ -6,8 +6,8 @@
   <title>Contact - Zeshan Fayyaz</title>
 
   <!-- ✅ Styles -->
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../mobile.css">
+  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../mobile.css?v=5">
 
   <!-- ✅ Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,19 +19,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../refs/favicon/favicon-16x16.png" />
   <link rel="shortcut icon" href="../refs/favicon/favicon.ico" type="image/x-icon" />
 </head>
-
-<script>
-  (function(){
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-    if(!btn || !nav) return;
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('is-open', !open);
-    });
-  })();
-</script>
 
 
 <body>
@@ -87,7 +74,18 @@
     </div>
   </div>
 
-  <!-- ✅ Hamburger Toggle Script -->
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('is-open', !open);
+      });
+    })();
+  </script>
 
 </body>
 </html>
