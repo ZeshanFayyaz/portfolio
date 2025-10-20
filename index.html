@@ -34,14 +34,14 @@
 
   <!-- ✅ Navigation -->
   <nav class="navbar">
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
-    <ul id="primary-nav" class="nav-links">
+    <ul class="nav-links">
       <li><a href="about/">About Me</a></li>
       <li><a href="resume/">Resume</a></li>
       <li><a href="projectpub/">Publications and Projects</a></li>
       <li><a href="contact/">Contact</a></li>
     </ul>
   </nav>
+
 
 
 
@@ -68,18 +68,6 @@
     </div>
   </section>
 
-  <script>
-    (function(){
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-nav');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        nav.classList.toggle('is-open', !open);
-      });
-    })();
-  </script>
 
 
 </body>
